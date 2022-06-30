@@ -6,6 +6,7 @@ BACKGROUND_COLOR = "#B1DDC6"
 
 current_card = {}
 
+# end game func
 
 def end_game():
     global flip_timer
@@ -16,6 +17,7 @@ def end_game():
     green_button.config(state="disabled")
     red_button.config(state="disabled")
 
+# next card func
 
 def next_card():
     global current_card, flip_timer
@@ -28,11 +30,13 @@ def next_card():
 
     flip_timer = window.after(3000, func=flip_card)
 
+# flip card func
 
 def flip_card():
     canvas.itemconfig(card_title, text="Definition", fill="white")
     canvas.itemconfig(card_word, text=current_card["Word"], fill="white")
     canvas.itemconfig(canvas_image, image=back_img)
+
 
 
 window = Tk()
@@ -57,6 +61,8 @@ red_button_img = PhotoImage(file="wrong.png")
 red_button = Button(image=red_button_img, command=end_game, highlightthickness=0)
 red_button.grid(row=1, column=0)
 
+
 next_card()
+
 
 window.mainloop()
