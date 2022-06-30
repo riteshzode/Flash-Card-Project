@@ -36,8 +36,7 @@ def flip_card():
     canvas.itemconfig(card_title, text="Definition", fill="white")
     canvas.itemconfig(card_word, text=current_card["Word"], fill="white")
     canvas.itemconfig(canvas_image, image=back_img)
-
-
+    
 
 window = Tk()
 window.title("Flash Card Game")
@@ -61,8 +60,6 @@ red_button_img = PhotoImage(file="wrong.png")
 red_button = Button(image=red_button_img, command=end_game, highlightthickness=0)
 red_button.grid(row=1, column=0)
 
-
 next_card()
-
 
 window.mainloop()
