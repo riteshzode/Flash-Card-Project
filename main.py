@@ -6,7 +6,7 @@ BACKGROUND_COLOR = "#B1DDC6"
 
 current_card = {}
 
-# end game func
+# end game function
 
 def end_game():
     global flip_timer
@@ -17,7 +17,7 @@ def end_game():
     green_button.config(state="disabled")
     red_button.config(state="disabled")
 
-# next card func
+# next card function
 
 def next_card():
     global current_card, flip_timer
@@ -30,7 +30,7 @@ def next_card():
 
     flip_timer = window.after(3000, func=flip_card)
 
-# flip card func
+# flip card function
 
 def flip_card():
     canvas.itemconfig(card_title, text="Definition", fill="white")
